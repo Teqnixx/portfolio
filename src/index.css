@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import "tailwindcss";
+
+/* 
+  Color Palette
+  -#111821
+  -#0099ff
+  -#162d45
+  -#d3fbd8
+*/
+
+@theme {
+  --font-quicksand: Quicksand;
+  --color-background: #111821;
+  --color-primary: #0088ee;
+  --color-primary-hover: #007acc;
+}
+
+.nav-item {
+  position: relative;
+  display: inline-block;
+}
+
+.nav-item::after {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 2px;
+  background: white;
+  bottom: 1px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease-out;
+}
+
+.nav-item:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+.nav-item:hover {
+  transform: scale(1.1);
+  color: white;
+}
