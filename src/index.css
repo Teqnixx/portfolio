@@ -11,9 +11,10 @@
 
 @theme {
   --font-quicksand: Quicksand;
-  --color-background: #111821;
-  --color-primary: #0088ee;
+  --color-background: #050816;
+  --color-primary: #2a60eb;
   --color-primary-hover: #007acc;
+  --color-secondary: #191a34;
 }
 
 .nav-item {
@@ -26,7 +27,7 @@
   position: absolute;
   width: 50%;
   height: 2px;
-  background: white;
+  background: #182431;
   bottom: 1px;
   left: 50%;
   transform: translateX(-50%) scaleX(0);
@@ -41,4 +42,9 @@
 .nav-item:hover {
   transform: scale(1.1);
   color: white;
+  transition: transform 0.2s ease-out;
+}
+
+.nav-item.active::after {
+  transform: translateX(-50%) scaleX(1);
 }
