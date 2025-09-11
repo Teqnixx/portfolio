@@ -6,8 +6,8 @@ function Home() {
     <section className="grid lg:grid-cols-[1.5fr_1fr] grid-rows-[1fr] gap-y-[10px] gap-x-[10px] items-center max-w-screen-2xl pt-24 sm:pt-34 lg:pt-44 pb-20 px-5 sm:px-8 lg:px-16 mx-auto overflow-hidden text-white">
       <div className="flex justify-center lg:justify-end order-1 lg:order-2">
         <div className="relative rounded-full border-4 border-primary z-50 overflow-hidden w-fit">
-          <img className="absolute inset-0 object-cover rounded-full w-[clamp(200px,30vw,400px)] h-auto" src={BackgroundPic} alt="background-pic" />
-          <img className="relative h-auto rounded-full drop-shadow-lg drop-shadow-black/50 w-[clamp(200px,30vw,400px)] h-auto" src={Pic} alt="personal-pic" />
+          <img className="absolute inset-0 object-cover rounded-full w-[clamp(200px,30vw,400px)] h-auto" src={BackgroundPic} alt="background-pic" loading='lazy' />
+          <img className="relative h-auto rounded-full drop-shadow-lg drop-shadow-black/50 w-[clamp(200px,30vw,400px)] h-auto" src={Pic} alt="personal-pic" loading='lazy' />
         </div>
       </div>
 
