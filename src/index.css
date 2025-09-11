@@ -11,10 +11,12 @@
 
 @theme {
   --font-quicksand: Quicksand;
-  --color-background: #050816;
-  --color-primary: #2a60eb;
-  --color-primary-hover: #007acc;
-  --color-secondary: #191a34;
+  --color-background: #040509;
+  --color-primary: #253fb7;
+  --color-highlight: #3050ea;
+  --color-primary-hover: #1e3291;
+  --color-secondary: #1e3291;
+  --color-barline: #1e2123;
 }
 
 .nav-item {
@@ -27,7 +29,7 @@
   position: absolute;
   width: 50%;
   height: 2px;
-  background: #182431;
+  background: white;
   bottom: 1px;
   left: 50%;
   transform: translateX(-50%) scaleX(0);

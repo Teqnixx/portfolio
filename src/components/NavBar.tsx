@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 
 function NavBar() {
   return (
-    <header className="fixed z-100 top-0 w-full pt-0 bg-secondary">
+    <header className="fixed z-100 top-0 w-full pt-0 bg-background outline-1 outline-barline">
       <nav className="flex max-w-screen-3xl px-5 sm:px-8 lg:px-16 mx-auto grid grid-flow-col py-3 sm:py-6">
         <div className='flex items-center'>
           <div className='cursor-pointer'>

@@ -1,6 +1,5 @@
 import Pic from '../assets/pic.png';
 import BackgroundPic from '../assets/background-pic.jpg';
-import { Link } from 'react-router-dom';
 
 function Home() {
   return (
@@ -13,18 +12,18 @@ function Home() {
       </div>
 
       <div className="order-2 lg:order-1">
-        <span className="block text-[2.5rem] md:text-[5rem]">Hi! I'm Allen Jamison</span>
-        <div className="flex items-center text-[1rem] md:text-[2rem] font-medium">
-          <span className="text-primary">Business Analyst</span>
+        <span className="block text-[2.5rem] md:text-[5rem] lg:text-start text-center">Hi! I'm Allen Jamison</span>
+        <div className="flex lg:justify-start justify-center items-center text-[1rem] md:text-[2rem] font-medium">
+          <span className="text-highlight">Business Analyst</span>
           <span className="h-max text-[1rem] mx-2">●</span>
-          <span className="text-primary">Developer</span>
+          <span className="text-highlight">Developer</span>
         </div>
         <span>
           I’m a Cum Laude graduate in Information Technology - Business Analytics, certified in Data Analytics, Databases, and IT Passport. Skilled in data visualization, database management, and software development to create data-driven solutions.
         </span>
-        <Link to="/about" className='cursor-pointer hover:bg-primary-hover bg-primary text-center px-10 py-3 rounded-full text-white'>
+        {/* <Link to="/about" className='cursor-pointer hover:bg-primary-hover bg-primary text-center px-10 py-3 rounded-full text-white'>
           About Me
-        </Link>
+        </Link> */}
       </div>
     </section>
   )
