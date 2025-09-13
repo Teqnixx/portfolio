@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
 @import "tailwindcss";
 
 /* 
@@ -11,6 +12,7 @@
 
 @theme {
   --font-quicksand: Quicksand;
+  --font-major-mono: "Major Mono Display", monospace;
   --color-background: #040509;
   --color-primary: #253fb7;
   --color-highlight: #3050ea;
