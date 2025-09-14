@@ -8,7 +8,7 @@ type ButtonProps = {
 
 const Button: React.FC<ButtonProps> = ({ label, onClick, variant = "primary" }) => {
 
-  const baseStyle = "cursor-pointer text-center px-10 py-3 rounded-full";
+  const baseStyle = "cursor-pointer text-center px-8 py-3 rounded-full";
 
   const variantStyles: Record<ButtonProps["variant"], string> = {
     primary: "hover:bg-primary-hover bg-primary text-white"

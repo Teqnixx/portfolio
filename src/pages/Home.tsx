@@ -5,7 +5,7 @@ import { HashLink } from 'react-router-hash-link';
 
 function Home() {
   return (
-    <div className='h-dvh'>
+    <div className='md:h-dvh'>
       <section className="grid lg:grid-cols-[1.5fr_1fr] grid-rows-[1fr] gap-y-[10px] gap-x-[10px] items-center max-w-screen-2xl h-[85vh] pt-24 sm:pt-34 lg:pt-44 pb-20 px-5 sm:px-8 lg:px-16 mx-auto overflow-hidden text-white">
         <div className="flex justify-center lg:justify-end order-1 lg:order-2">
           <div className="relative rounded-full border-4 border-primary z-50 overflow-hidden w-fit">
@@ -27,7 +27,7 @@ function Home() {
         </div>
       </section>
       <div className='text-white flex flex-col items-center'>
-        <HashLink smooth to="#about" className='cursor-pointer'>
+        <HashLink smooth to="#about" className='cursor-pointer opacity-25 hover:opacity-75 transition'>
           <Mouse size={50} />
           <ChevronsDown className='animate-bounce mt-2' size={50} />
         </HashLink>

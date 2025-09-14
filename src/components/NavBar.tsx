@@ -5,15 +5,15 @@ import { HashLink } from 'react-router-hash-link'
 function NavBar() {
   return (
     <header className="fixed z-100 top-0 w-full pt-0 bg-background border-b-1 border-barline">
-      <nav className="flex max-w-screen-3xl px-5 sm:px-8 lg:px-16 mx-auto grid grid-flow-col py-3 sm:py-6">
+      <nav className="flex max-w-screen-3xl px-5 sm:px-8 lg:px-16 mx-auto grid grid-flow-col py-2 sm:py-4">
         <div className='flex items-center'>
           <div className='cursor-pointer'>
-            <NavLink className='text-neutral-300 sm:text-3xl text-xl font-major-mono font-bold' to="/">
+            <NavLink className='text-neutral-300 sm:text-2xl text-xl font-major-mono font-bold' to="/">
               Allen Jamison
             </NavLink>
           </div>
         </div>
-        <ul className='hidden lg:flex text-lg justify-self-center align-middle items-center'>
+        <ul className='hidden lg:flex text-md justify-self-center align-middle items-center'>
           <li>
             <HashLink
               to="/#"
