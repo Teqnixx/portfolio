@@ -1,28 +1,38 @@
 import Pic from '../assets/pic.png';
 import BackgroundPic from '../assets/background-pic.jpg';
+import { Mouse, ChevronsDown } from 'lucide-react';
+import { HashLink } from 'react-router-hash-link';
 
 function Home() {
   return (
-    <section className="grid lg:grid-cols-[1.5fr_1fr] grid-rows-[1fr] gap-y-[10px] gap-x-[10px] items-center max-w-screen-2xl pt-24 sm:pt-34 lg:pt-44 pb-20 px-5 sm:px-8 lg:px-16 mx-auto overflow-hidden text-white">
-      <div className="flex justify-center lg:justify-end order-1 lg:order-2">
-        <div className="relative rounded-full border-4 border-primary z-50 overflow-hidden w-fit">
-          <img className="absolute inset-0 object-cover rounded-full w-[clamp(200px,30vw,400px)] h-auto" src={BackgroundPic} alt="background-pic" loading='lazy' />
-          <img className="relative h-auto rounded-full drop-shadow-lg drop-shadow-black/50 w-[clamp(200px,30vw,400px)] h-auto" src={Pic} alt="personal-pic" loading='lazy' />
+    <div className='h-dvh'>
+      <section className="grid lg:grid-cols-[1.5fr_1fr] grid-rows-[1fr] gap-y-[10px] gap-x-[10px] items-center max-w-screen-2xl h-[85vh] pt-24 sm:pt-34 lg:pt-44 pb-20 px-5 sm:px-8 lg:px-16 mx-auto overflow-hidden text-white">
+        <div className="flex justify-center lg:justify-end order-1 lg:order-2">
+          <div className="relative rounded-full border-4 border-primary z-50 overflow-hidden w-fit">
+            <img className="absolute inset-0 object-cover rounded-full w-[clamp(200px,30vw,400px)] h-auto" src={BackgroundPic} alt="background-pic" loading='lazy' />
+            <img className="relative h-auto rounded-full drop-shadow-lg drop-shadow-black/50 w-[clamp(200px,30vw,400px)] h-auto" src={Pic} alt="personal-pic" loading='lazy' />
+          </div>
         </div>
-      </div>
 
-      <div className="order-2 lg:order-1">
-        <span className="block text-3xl md:text-6xl lg:text-start text-center">Hi! I'm Allen Jamison</span>
-        <div className="flex lg:justify-start justify-center items-center text-[1rem] md:text-[2rem] font-medium">
-          <span className="text-highlight">Business Analyst</span>
-          <span className="h-max text-[1rem] mx-2">●</span>
-          <span className="text-highlight">Developer</span>
+        <div className="order-2 lg:order-1">
+          <span className="block text-3xl md:text-6xl lg:text-start text-center">Hi! I'm Allen Jamison</span>
+          <div className="flex lg:justify-start justify-center items-center text-[1rem] md:text-[2rem] mt-5 mb-1 font-medium">
+            <span className="text-highlight">Business Analyst</span>
+            <span className="h-max text-[1rem] mx-2">●</span>
+            <span className="text-highlight">Developer</span>
+          </div>
+          <span className='text-sm sm:text-lg'>
+            I’m a Cum Laude graduate in Information Technology - Business Analytics, certified in Data Analytics, Databases, and IT Passport. Skilled in data visualization, database management, and software development to create data-driven solutions.
+          </span>
         </div>
-        <span className='text-sm sm:text-lg'>
-          I’m a Cum Laude graduate in Information Technology - Business Analytics, certified in Data Analytics, Databases, and IT Passport. Skilled in data visualization, database management, and software development to create data-driven solutions.
-        </span>
+      </section>
+      <div className='text-white flex flex-col items-center'>
+        <HashLink smooth to="#about" className='cursor-pointer'>
+          <Mouse size={50} />
+          <ChevronsDown className='animate-bounce mt-2' size={50} />
+        </HashLink>
       </div>
-    </section>
+    </div>
   )
 }
 
