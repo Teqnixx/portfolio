@@ -7,7 +7,7 @@ function Footer() {
       <div className='max-w-screen-2xl py-6 px-5 sm:px-8 lg:px-16 mx-auto text-white'>
         <div className='block md:flex justify-between'>
           <div>
-            <NavLink className='text-neutral-300 text-3xl font-bold font-major-mono' to="/">
+            <NavLink className='text-neutral-300 sm:text-3xl text-xl font-bold font-major-mono' to="/">
               Allen Jamison
             </NavLink>
           </div>

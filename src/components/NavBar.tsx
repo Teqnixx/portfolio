@@ -7,7 +7,7 @@ function NavBar() {
       <nav className="flex max-w-screen-3xl px-5 sm:px-8 lg:px-16 mx-auto grid grid-flow-col py-3 sm:py-6">
         <div className='flex items-center'>
           <div className='cursor-pointer'>
-            <NavLink className='text-neutral-300 text-3xl font-major-mono font-bold' to="/">
+            <NavLink className='text-neutral-300 sm:text-3xl text-xl font-major-mono font-bold' to="/">
               Allen Jamison
             </NavLink>
           </div>
