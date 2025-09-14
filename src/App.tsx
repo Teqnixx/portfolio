@@ -1,12 +1,12 @@
 import './App.css'
 import { HashRouter } from 'react-router-dom'
-import AppRoutes from './routers/AppRoutes'
+import MainLayout from './layouts/MainLayout'
 
 function App() {
 
   return (
     <HashRouter>
-      <AppRoutes />
+      <MainLayout />
     </HashRouter>
   )
 }
