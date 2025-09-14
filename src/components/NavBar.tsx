@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import Button from './Button';
+import { HashLink } from 'react-router-hash-link'
 
 function NavBar() {
   return (
@@ -14,32 +15,40 @@ function NavBar() {
         </div>
         <ul className='hidden lg:flex text-lg justify-self-center align-middle items-center'>
           <li>
-            <NavLink className={({ isActive }) =>
-              isActive ? 'px-8 py-2 nav-item text-white active' : 'px-8 py-2 nav-item text-neutral-300'}
-              to="/">
-                Home
-            </NavLink>
+            <HashLink
+              to="/#"
+              smooth
+              className="px-8 py-2 nav-item text-neutral-300"
+            >
+              Home
+            </HashLink>
           </li>
           <li>
-            <NavLink className={({ isActive }) =>
-              isActive ? 'px-8 py-2 nav-item text-white active' : 'px-8 py-2 nav-item text-neutral-300'}
-              to="/about">
-                About Me
-            </NavLink>
+            <HashLink
+              to="/#about"
+              smooth
+              className="px-8 py-2 nav-item text-neutral-300"
+            >
+              About Me
+            </HashLink>
           </li>
           <li>
-            <NavLink className={({ isActive }) =>
-              isActive ? 'px-8 py-2 nav-item text-white active' : 'px-8 py-2 nav-item text-neutral-300'}
-              to="/projects">
-                Projects
-            </NavLink>
+            <HashLink
+              to="/#projects"
+              smooth
+              className="px-8 py-2 nav-item text-neutral-300"
+            >
+              Projects
+            </HashLink>
           </li>
           <li>
-            <NavLink className={({ isActive }) =>
-              isActive ? 'px-8 py-2 nav-item text-white active' : 'px-8 py-2 nav-item text-neutral-300'}
-              to="/contact">
-                Contact
-            </NavLink>
+            <HashLink
+              to="/#contact"
+              smooth
+              className="px-8 py-2 nav-item text-neutral-300"
+            >
+              Contact
+            </HashLink>
           </li>
         </ul>
         <div className='justify-self-end'>

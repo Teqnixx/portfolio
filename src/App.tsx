@@ -1,13 +1,13 @@
 import './App.css'
-import { HashRouter } from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom'
 import MainLayout from './layouts/MainLayout'
 
 function App() {
 
   return (
-    <HashRouter>
+    <BrowserRouter>
       <MainLayout />
-    </HashRouter>
+    </BrowserRouter>
   )
 }
 
