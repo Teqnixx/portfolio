@@ -1,0 +1,41 @@
+import { NavLink } from "react-router-dom";
+import { sidebarItems } from "./SideBar";
+
+interface BottomNavProps {
+  className?: string;
+}
+
+function BottomNav({ className = "" }: BottomNavProps) {
+  return (
+    <nav className={`fixed bottom-0 left-0 right-0 ${className}`}>
+      <div className="mx-auto max-w-screen-md">
+        <div className="m-2 rounded-xl bg-background">
+          <ul className="grid grid-flow-col auto-cols-fr">
+            {sidebarItems.map((item) => (
+              <li key={item.label}>
+                <NavLink
+                  to={item.route}
+                  className={({ isActive }) =>
+                    `flex flex-col items-center justify-center gap-1 p-2 rounded-lg transition-colors duration-200 ${
+                      isActive
+                        ? 'bg-primary text-white'
+                        : 'text-secondary hover:bg-primary hover:text-white'
+                    }`
+                  }
+                  end
+                >
+                  <item.icon />
+                  <span className="hidden xs:block text-xs">{item.label}</span>
+                </NavLink>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </nav>
+  );
+}
+
+export default BottomNav;
+
+

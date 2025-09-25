@@ -1,0 +1,93 @@
+[
+  {
+    "id": 1,
+    "profile": {
+      "firstname": "Allen Jamison",
+      "middlename": "Baral",
+      "middle-initial": "B.",
+      "lastname": "Mendoza"
+    },
+    "contact": {
+      "phone-number": "09955762134",
+      "email": "allenjamison027@gmail.com",
+      "github": "https://github.com/Teqnixx"
+    },
+    "education": [
+      {
+        "id": 1,
+        "degree": "BS in Information Technology",
+        "achievement": "Cum Laude",
+        "school": "Batangas State University - ARASOF Nasugbu",
+        "address": "Nasugbu, Batangas, Philippines",
+        "year": "2021 - 2025"
+      },
+      {
+        "id": 2,
+        "degree": "Senior High School",
+        "achievement": "w/ Honors",
+        "school": "Pantalan Senior High School",
+        "address": "Nasugbu, Batangas, Philippines",
+        "year": "2019 - 2021"
+      },
+      {
+        "id": 3,
+        "degree": "Junior High School",
+        "achievement": "",
+        "school": "Dr. Crisogono B. Ermita Sr. Memorial National High School",
+        "address": "Nasugbu, Batangas, Philippines",
+        "year": "2017 - 2019"
+      },
+      {
+        "id": 4,
+        "degree": "Junior High School",
+        "achievement": "",
+        "school": "San Jose National High School",
+        "address": "Rodriguez, Rizal, Philippines",
+        "year": "2015 - 2017"
+      }
+    ],
+    "projects": [
+      {
+        "id": 1,
+        "name": "Intern-Net 2.0: Enhanced Student Internship Management System",
+        "description": "",
+        "project-url": "",
+        "languages": ["html", "css", "javascript", "php", "jquery", "mysql"]
+      }
+    ],
+    "certificates": [
+      {
+        "id": 1,
+        "title": "IT Passport",
+        "issuer": "Philippine National IT Standard Foundation Inc.",
+        "dateIssued": "November 28, 2024",
+        "imageUrl": "./src/assets/philnitslogo.webp",
+        "certificateLink": "none"
+      },
+      {
+        "id": 2,
+        "title": "IT Specialist - Data Analytics",
+        "issuer": "Certiport",
+        "dateIssued": "May 20, 2024",
+        "imageUrl": "./src/assets/it-specialist-data-analytics.webp",
+        "certificateLink": "https://www.credly.com/badges/6ac72127-eff3-484a-8ff6-ad8b394f1bc9/public_url"
+      },
+      {
+        "id": 3,
+        "title": "Data Analytics Essentials",
+        "issuer": "Cisco",
+        "dateIssued": "November 27, 2023",
+        "imageUrl": "./src/assets/data-analytics-essentials.webp",
+        "certificateLink": "https://www.credly.com/badges/872ccdbe-456e-4cf3-b16a-287d47109e44/public_url"
+      },
+      {
+        "id": 4,
+        "title": "IT Specialist – Databases",
+        "issuer": "Certiport",
+        "dateIssued": "May 21, 2023",
+        "imageUrl": "./src/assets/it-specialist-databases.webp",
+        "certificateLink": "https://www.credly.com/badges/df492509-c013-438f-977a-679b53ddf7ec/public_url"
+      }
+    ]
+  }
+]
