@@ -53,7 +53,7 @@ const About: React.FC<AboutProps> = ({ user }) => {
             <div className="flex flex-col sm:flex-row items-center sm:items-start mt-4 sm:mt-0 justify-center sm:justify-start">
               <img
                 className="w-24 h-24 rounded-xl object-cover border-1 border-primary shadow-lg"
-                src="/background-pic.webp"
+                src="./background-pic.webp"
                 alt="Profile"
               />
               <div className="sm:ml-4 mt-4 sm:mt-0 flex flex-col justify-center gap-2 h-24 sm:h-24" style={{ height: '6rem' }}>
