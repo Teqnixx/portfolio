@@ -94,6 +94,7 @@ const About: React.FC<AboutProps> = ({ user }) => {
                       }}
                       className="bg-gray-100 border border-gray-300 hover:bg-gray-200 text-xs"
                       ariaLabel="Copy email"
+                    />
                 </div>
               </div>
             </div>
