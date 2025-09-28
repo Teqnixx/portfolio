@@ -8,7 +8,7 @@ export interface SidebarItem {
 }
 
 export const sidebarItems: SidebarItem[] = [
-  { label: "About", icon: User, route: "/about" },
+  { label: "About", icon: User, route: "/" },
   { label: "Education", icon: Book, route: "/education" },
   { label: "Certifications", icon: Medal, route: "/certifications" },
   { label: "Skills", icon: UserRoundCog, route: "/skills" },
@@ -23,7 +23,7 @@ interface SideBarProps {
 function SideBar({ className = "" }: SideBarProps) {
   return (
     <div className={`${className}`}>
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-2">
         {sidebarItems.map((item) => (
           <NavLink
             key={item.label}
@@ -37,8 +37,8 @@ function SideBar({ className = "" }: SideBarProps) {
             }
             end
           >
-            <item.icon />
-            <span className="hidden md:block">{item.label}</span>
+            <item.icon size={20} />
+            <span className="hidden lg:block text-sm">{item.label}</span>
           </NavLink>
         ))}
       </div>

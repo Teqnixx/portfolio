@@ -4,13 +4,14 @@
     "profile": {
       "firstname": "Allen Jamison",
       "middlename": "Baral",
-      "middle-initial": "B.",
+      "middleInitial": "B.",
       "lastname": "Mendoza"
     },
     "contact": {
-      "phone-number": "09955762134",
+      "phoneNumber": "09955762134",
       "email": "allenjamison027@gmail.com",
-      "github": "https://github.com/Teqnixx"
+      "github": "https://github.com/Teqnixx",
+      "linkedin": "www.linkedin.com/in/allen-jamison-mendoza-18a4a7354"
     },
     "education": [
       {

@@ -7,20 +7,20 @@ import Certifications from './pages/Certifications'
 import Skills from './pages/Skills'
 import Projects from './pages/Projects'
 import Contact from './pages/Contact'
+import data from './data/user.json'
 
 function App() {
 
   return (
-    <HashRouter basename={import.meta.env.BASE_URL}>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<MainLayout />}>
-          <Route index element={<About />} />
-          <Route path="about" element={<About />} />
-          <Route path="education" element={<Education />} />
-          <Route path="certifications" element={<Certifications />} />
-          <Route path="skills" element={<Skills />} />
-          <Route path="projects" element={<Projects />} />
-          <Route path="contact" element={<Contact />} />
+          <Route path="/" element={<About user={data} />} />
+          <Route path="/education" element={<Education />} />
+          <Route path="/certifications" element={<Certifications />} />
+          <Route path="/skills" element={<Skills />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
         </Route>
       </Routes>
     </HashRouter>
