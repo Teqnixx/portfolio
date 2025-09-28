@@ -26,10 +26,18 @@ interface Profile {
   lastname: string;
 }
 
+interface Contact {
+  phoneNumber: string;
+  email: string;
+  github: string;
+  linkedin: string;
+}
+
 interface User {
   education: Education[];
   certificates: Certificates[];
   profile: Profile;
+  contact: Contact;
 }
 
 interface AboutProps {
@@ -45,7 +53,7 @@ const About: React.FC<AboutProps> = ({ user }) => {
             <div className="flex flex-col sm:flex-row items-center sm:items-start mt-4 sm:mt-0 justify-center sm:justify-start">
               <img
                 className="w-24 h-24 rounded-xl object-cover border-1 border-primary shadow-lg"
-                src="./src/assets/background-pic.webp"
+                src="/background-pic.webp"
                 alt="Profile"
               />
               <div className="sm:ml-4 mt-4 sm:mt-0 flex flex-col justify-center gap-2 h-24 sm:h-24" style={{ height: '6rem' }}>
@@ -58,7 +66,7 @@ const About: React.FC<AboutProps> = ({ user }) => {
                     <div className="flex gap-2 justify-center">
                       <IconButton
                         icon={<Github size={16} />}
-                        link="https://github.com/Teqnixx"
+                        link={item.contact.github}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="bg-primary text-white hover:bg-secondary"
@@ -66,7 +74,7 @@ const About: React.FC<AboutProps> = ({ user }) => {
                       />
                       <IconButton
                         icon={<Linkedin size={16} />}
-                        link="https://www.linkedin.com/in/allen-jamison-mendoza-18a4a7354"
+                        link={item.contact.linkedin}
                         target="_blank"
                         rel="noopener noreferrer"
                         style={{
@@ -80,13 +88,12 @@ const About: React.FC<AboutProps> = ({ user }) => {
                     </div>
                     <IconButton
                       icon={<Copy size={16} className="text-secondary hover:text-primary transition-colors" />}
-                      label="allenjamison027@gmail.com"
+                      label={item.contact.email}
                       onClick={() => {
-                        navigator.clipboard.writeText('allenjamison027@gmail.com');
+                        navigator.clipboard.writeText(item.contact.email);
                       }}
                       className="bg-gray-100 border border-gray-300 hover:bg-gray-200 text-xs"
                       ariaLabel="Copy email"
-                    />
                 </div>
               </div>
             </div>
