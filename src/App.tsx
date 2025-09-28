@@ -1,5 +1,5 @@
 import './App.css'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import MainLayout from './layouts/MainLayout'
 import About from './pages/About'
 import Education from './pages/Education'
@@ -11,7 +11,7 @@ import Contact from './pages/Contact'
 function App() {
 
   return (
-    <BrowserRouter basename={import.meta.env.BASE_URL}>
+    <HashRouter basename={import.meta.env.BASE_URL}>
       <Routes>
         <Route path="/" element={<MainLayout />}>
           <Route index element={<About />} />
@@ -23,7 +23,7 @@ function App() {
           <Route path="contact" element={<Contact />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
