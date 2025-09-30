@@ -1,5 +1,6 @@
-import { Copy, Github, Linkedin, MapPin, Award, Code2, Palette, Music, Camera, Gamepad2 } from "lucide-react";
+import { Copy, Github, Linkedin, MapPin, Award, Code2, Palette, Music, Camera, Gamepad2, Check } from "lucide-react";
 import IconButton from "../components/IconButton";
+import React from "react";
 
 interface Education {
   id: number;
@@ -54,6 +55,9 @@ interface AboutProps {
 }
 
 const About: React.FC<AboutProps> = ({ user }) => {
+
+  const [copied, setCopied] = React.useState(false);
+
   return (
     <div className="w-full space-y-8">
       {user.map((item, index) => (
@@ -100,15 +104,69 @@ const About: React.FC<AboutProps> = ({ user }) => {
                       ariaLabel="LinkedIn"
                     />
                   </div>
-                  <IconButton
-                    icon={<Copy size={18} className="text-secondary hover:text-primary transition-colors" />}
-                    label={item.contact.email}
-                    onClick={() => {
-                      navigator.clipboard.writeText(item.contact.email);
-                    }}
-                    className="bg-gray-100 border border-gray-300 hover:bg-gray-200"
-                    ariaLabel="Copy email"
-                  />
+                  <div className="relative flex items-center">
+                    <IconButton
+                      icon={
+                        <span
+                          className="relative flex items-center h-5"
+                          style={{
+                            minWidth: `max(180px, calc(${item.contact.email.length}ch))`,
+                            width: `calc(${item.contact.email.length}ch + 48px)`,
+                          }}
+                        >
+                          <span
+                            className={`absolute left-0 right-0 flex items-center gap-1 transition-all duration-300 ${
+                              copied
+                                ? "opacity-0 translate-y-2 pointer-events-none"
+                                : "opacity-100 translate-y-0"
+                            }`}
+                            style={{
+                              width: "100%",
+                              justifyContent: "flex-start",
+                            }}
+                          >
+                            <Copy size={18} className="text-secondary hover:text-primary transition-colors" />
+                            <span className="ml-1 truncate">{item.contact.email}</span>
+                          </span>
+                          <span
+                            className={`absolute left-0 right-0 flex items-center gap-1 transition-all duration-300 ${
+                              copied
+                                ? "opacity-100 translate-y-0"
+                                : "opacity-0 -translate-y-2 pointer-events-none"
+                            }`}
+                            style={{
+                              width: "100%",
+                              justifyContent: "flex-start",
+                            }}
+                          >
+                            <Check size={18} className="text-primary" />
+                            <span
+                              className="text-primary"
+                              style={{
+                                width: `calc(${item.contact.email.length}ch)`,
+                                display: "inline-block",
+                                whiteSpace: "nowrap",
+                              }}
+                            >
+                              Copied!
+                            </span>
+                          </span>
+                        </span>
+                      }
+                      label={undefined}
+                      onClick={() => {
+                        navigator.clipboard.writeText(item.contact.email);
+                        setCopied(true);
+                        setTimeout(() => setCopied(false), 1500);
+                      }}
+                      className="bg-gray-100 border border-gray-300 hover:bg-gray-200 justify-start"
+                      style={{
+                        minWidth: `max(180px, calc(${item.contact.email.length}ch + 48px))`,
+                        width: `calc(${item.contact.email.length}ch + 48px)`,
+                      }}
+                      ariaLabel="Copy email"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
