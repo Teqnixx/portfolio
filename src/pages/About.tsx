@@ -66,6 +66,7 @@ const About: React.FC<AboutProps> = ({ user }) => {
             <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-6">
               <img
                 className="w-32 h-32 rounded-xl object-cover border-2 border-primary shadow-lg"
+                loading="lazy"
                 src="./background-pic.webp"
                 alt="Profile"
               />

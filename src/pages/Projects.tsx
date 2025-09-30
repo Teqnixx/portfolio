@@ -52,18 +52,17 @@ const Projects: React.FC<ProjectsProps> = ({ user }) => {
                 {item.projects.map((project) => (
                   <div key={project.id} className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
                     <div className="flex flex-col lg:flex-row gap-6">
-                      {/* Screenshots */}
                       {project.screenshots.length > 0 && project.screenshots[0] && (
                         <div className="lg:w-1/2">
                           <img
                             src={project.screenshots[0]}
+                            loading="lazy"
                             alt={`${project.name} screenshot`}
                             className="w-full h-48 lg:h-64 object-cover rounded-lg border border-gray-200 shadow-sm"
                           />
                         </div>
                       )}
                       
-                      {/* Project Info */}
                       <div className={`flex-1 ${project.screenshots.length > 0 && project.screenshots[0] ? 'lg:w-1/2' : ''}`}>
                         <h3 className="text-base sm:text-lg md:text-xl font-bold text-primary mb-3">
                           {project.name}
@@ -73,7 +72,6 @@ const Projects: React.FC<ProjectsProps> = ({ user }) => {
                           {project.description}
                         </p>
                         
-                        {/* Technologies */}
                         <div className="mb-4">
                           <h4 className="text-sm sm:text-base font-semibold text-primary mb-2">Technologies Used:</h4>
                           <div className="flex flex-wrap gap-2">
@@ -89,7 +87,6 @@ const Projects: React.FC<ProjectsProps> = ({ user }) => {
                           </div>
                         </div>
                         
-                        {/* Project Link */}
                         {project.projectUrl && (
                           <a
                             href={project.projectUrl}

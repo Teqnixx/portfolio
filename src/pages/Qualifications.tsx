@@ -80,6 +80,7 @@ const Qualifications: React.FC<QualificationsProps> = ({ user }) => {
                     <div className="flex-shrink-0">
                       <img
                         src={cert.imageUrl}
+                        loading="lazy"
                         alt={cert.title}
                         className="w-16 h-16 object-contain rounded-lg border border-gray-200"
                       />
