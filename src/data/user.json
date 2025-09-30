@@ -66,10 +66,10 @@
       {
         "id": 1,
         "name": "Intern-Net 2.0: Enhanced Student Internship Management System",
-        "description": "Intern-Net 2.0: Enhanced Student Internship Management System is a web-based platform developed to modernize and streamline the internship process at Batangas State University ARASOF – Nasugbu. It effectively addresses the challenges of traditional manual procedures—such as tedious paperwork, communication gaps, and tracking inefficiencies—by integrating features like job postings, Daily Time Record (DTR) management, performance evaluation, and real-time messaging. Built with modern web technologies, the system also includes a job skill matchmaking algorithm and schedule prediction tool to optimize internship placements and planning. The research proved highly effective, significantly improving operational efficiency, enhancing collaboration among stakeholders, and elevating the overall internship experience for students and partner organizations.",
+        "description": "A comprehensive web-based platform that modernizes the internship process at Batangas State University ARASOF – Nasugbu. Features include job postings, Daily Time Record (DTR) management, performance evaluation, real-time messaging, and a job skill matchmaking algorithm. The system significantly improves operational efficiency and enhances collaboration between students and partner organizations.",
         "projectUrl": "",
         "screenshots": [
-
+          "./internnet-landing-page.webp"
         ],
         "languages": ["html", "css", "bootstrap", "javascript", "php", "jquery", "mysql"]
       }
@@ -80,7 +80,7 @@
         "title": "IT Passport",
         "issuer": "Philippine National IT Standard Foundation Inc.",
         "dateIssued": "November 28, 2024",
-        "imageUrl": "./src/assets/philnitslogo.webp",
+        "imageUrl": "./philnitslogo.webp",
         "certificateLink": "none"
       },
       {
@@ -88,7 +88,7 @@
         "title": "IT Specialist - Data Analytics",
         "issuer": "Certiport",
         "dateIssued": "May 20, 2024",
-        "imageUrl": "./src/assets/it-specialist-data-analytics.webp",
+        "imageUrl": "./it-specialist-data-analytics.webp",
         "certificateLink": "https://www.credly.com/badges/6ac72127-eff3-484a-8ff6-ad8b394f1bc9/public_url"
       },
       {
@@ -96,7 +96,7 @@
         "title": "Data Analytics Essentials",
         "issuer": "Cisco",
         "dateIssued": "November 27, 2023",
-        "imageUrl": "./src/assets/data-analytics-essentials.webp",
+        "imageUrl": "./data-analytics-essentials.webp",
         "certificateLink": "https://www.credly.com/badges/872ccdbe-456e-4cf3-b16a-287d47109e44/public_url"
       },
       {
@@ -104,7 +104,7 @@
         "title": "IT Specialist – Databases",
         "issuer": "Certiport",
         "dateIssued": "May 21, 2023",
-        "imageUrl": "./src/assets/it-specialist-databases.webp",
+        "imageUrl": "./it-specialist-databases.webp",
         "certificateLink": "https://www.credly.com/badges/df492509-c013-438f-977a-679b53ddf7ec/public_url"
       }
     ]

@@ -14,7 +14,7 @@ function App() {
         <Route path="/" element={<MainLayout />}>
           <Route path="/" element={<About user={data} />} />
           <Route path="/qualifications" element={<Qualifications user={data} />} />
-          <Route path="/projects" element={<Projects />} />
+          <Route path="/projects" element={<Projects user={data} />} />
         </Route>
       </Routes>
     </HashRouter>

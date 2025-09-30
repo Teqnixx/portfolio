@@ -8,7 +8,7 @@ export interface SidebarItem {
 }
 
 export const sidebarItems: SidebarItem[] = [
-  { label: "About", icon: User, route: "/" },
+  { label: "About Me", icon: User, route: "/" },
   { label: "Qualifications", icon: Award, route: "/qualifications" },
   { label: "Projects", icon: FileJson, route: "/projects" },
 ]
