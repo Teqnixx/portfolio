@@ -5,7 +5,22 @@
       "firstname": "Allen Jamison",
       "middlename": "Baral",
       "middleInitial": "B.",
-      "lastname": "Mendoza"
+      "lastname": "Mendoza",
+      "municipality": "Nasugbu",
+      "province": "Batangas",
+      "country": "Philippines",
+      "countryCode": "PH",
+      "introduction": "I'm Allen Jamison B. Mendoza, an aspiring IT professional passionate about building innovative solutions that merge technology and business strategy. As an Information Technology graduate with Business Analytics specialization, I transform complex problems into simple, impactful digital experiences. Driven by curiosity and continuous learning, I develop web applications, analyze data, and design intuitive systems to make technology more accessible and valuable in solving real-world challenges.",
+      "achievements": "Graduated Cum Laude from Batangas State University with multiple industry certifications including IT Specialist in Data Analytics and Databases, IT Passport, and web development credentials. My hands-on experience spans web development, data visualization, and database management using React.js, Python, Power BI, and Tableau. Each project has strengthened my ability to turn ideas into solutions, preparing me for meaningful impact in the tech industry.",
+      "interestAreas": [
+        "Web Development",
+        "Software Development",
+        "Data Analytics & Visualization",
+        "Database Management",
+        "Business Analytics"
+      ],
+      "expertise": "Passionate about building modern, intuitive web experiences using React.js, Node.js, Tailwind CSS, and PostgreSQL. I work across the stack with JavaScript, Python, Java, C#, and C++, crafting functional and impactful solutions. Data drives my curiosity — I uncover stories in numbers through Power BI and Tableau. I'm fascinated by smart database design and scalable architectures that create seamless user experiences. While focused on web development and data-driven applications, I also explore game development as a creative outlet to expand my problem-solving skills.",
+      "hobbies": "Beyond technology, I enjoy creative interests that inspire and balance my life. I play guitar and appreciate diverse music genres, finding joy in both performing and listening. Gaming helps me relax and challenge strategic thinking, while photography lets me capture everyday moments and see the world from new perspectives."
     },
     "contact": {
       "phoneNumber": "09955762134",
@@ -51,9 +66,12 @@
       {
         "id": 1,
         "name": "Intern-Net 2.0: Enhanced Student Internship Management System",
-        "description": "",
-        "project-url": "",
-        "languages": ["html", "css", "javascript", "php", "jquery", "mysql"]
+        "description": "Intern-Net 2.0: Enhanced Student Internship Management System is a web-based platform developed to modernize and streamline the internship process at Batangas State University ARASOF – Nasugbu. It effectively addresses the challenges of traditional manual procedures—such as tedious paperwork, communication gaps, and tracking inefficiencies—by integrating features like job postings, Daily Time Record (DTR) management, performance evaluation, and real-time messaging. Built with modern web technologies, the system also includes a job skill matchmaking algorithm and schedule prediction tool to optimize internship placements and planning. The research proved highly effective, significantly improving operational efficiency, enhancing collaboration among stakeholders, and elevating the overall internship experience for students and partner organizations.",
+        "projectUrl": "",
+        "screenshots": [
+
+        ],
+        "languages": ["html", "css", "bootstrap", "javascript", "php", "jquery", "mysql"]
       }
     ],
     "certificates": [

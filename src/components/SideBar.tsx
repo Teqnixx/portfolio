@@ -1,4 +1,4 @@
-import { type LucideIcon, User, Book, FileJson, Medal, UserRoundCog, Mail } from "lucide-react";
+import { type LucideIcon, User, Award, FileJson } from "lucide-react";
 import { NavLink } from "react-router-dom";
 
 export interface SidebarItem {
@@ -9,11 +9,8 @@ export interface SidebarItem {
 
 export const sidebarItems: SidebarItem[] = [
   { label: "About", icon: User, route: "/" },
-  { label: "Education", icon: Book, route: "/education" },
-  { label: "Certifications", icon: Medal, route: "/certifications" },
-  { label: "Skills", icon: UserRoundCog, route: "/skills" },
+  { label: "Qualifications", icon: Award, route: "/qualifications" },
   { label: "Projects", icon: FileJson, route: "/projects" },
-  { label: "Contact", icon: Mail, route: "/contact" },
 ]
 
 interface SideBarProps {
@@ -22,8 +19,8 @@ interface SideBarProps {
 
 function SideBar({ className = "" }: SideBarProps) {
   return (
-    <div className={`${className}`}>
-      <div className="flex flex-col gap-2">
+    <div className={`${className} flex flex-col`}>
+      <div className="flex flex-col gap-2 flex-1 justify-start">
         {sidebarItems.map((item) => (
           <NavLink
             key={item.label}
