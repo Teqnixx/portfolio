@@ -71,7 +71,7 @@
         "screenshots": [
           "./internnet-landing-page.webp"
         ],
-        "languages": ["html", "css", "bootstrap", "javascript", "php", "jquery", "mysql"]
+        "languages": ["HTML", "CSS", "Bootstrap", "JavaScript", "PhP", "jQuery", "MySql"]
       }
     ],
     "certificates": [

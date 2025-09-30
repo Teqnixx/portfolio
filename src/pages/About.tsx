@@ -59,7 +59,7 @@ const About: React.FC<AboutProps> = ({ user }) => {
   const [copied, setCopied] = React.useState(false);
 
   return (
-    <div className="w-full space-y-8">
+    <div className="w-full space-y-8 overflow-y-auto p-2">
       {user.map((item, index) => (
         <div key={index} className="space-y-8">
           <section>
@@ -81,8 +81,8 @@ const About: React.FC<AboutProps> = ({ user }) => {
                   <MapPin size={16} className="text-secondary" />
                   <span>{item.profile.municipality}, {item.profile.province}, {item.profile.country}</span>
                 </div>
-                <div className="flex flex-col xs:flex-row gap-3 justify-center sm:justify-start">
-                  <div className="flex gap-3">
+                <div className="flex flex-col xs:flex-row gap-3">
+                  <div className="flex justify-center sm:justify-start gap-3">
                     <IconButton
                       icon={<Github size={18} />}
                       link={item.contact.github}
@@ -105,7 +105,7 @@ const About: React.FC<AboutProps> = ({ user }) => {
                       ariaLabel="LinkedIn"
                     />
                   </div>
-                  <div className="relative flex items-center">
+                  <div className="relative flex items-center justify-center sm:justify-start">
                     <IconButton
                       icon={
                         <span
@@ -116,29 +116,21 @@ const About: React.FC<AboutProps> = ({ user }) => {
                           }}
                         >
                           <span
-                            className={`absolute left-0 right-0 flex items-center gap-1 transition-all duration-300 ${
+                            className={`w-full justify-start absolute left-0 right-0 flex items-center gap-1 transition-all duration-300 ${
                               copied
                                 ? "opacity-0 translate-y-2 pointer-events-none"
                                 : "opacity-100 translate-y-0"
                             }`}
-                            style={{
-                              width: "100%",
-                              justifyContent: "flex-start",
-                            }}
                           >
                             <Copy size={18} className="text-secondary hover:text-primary transition-colors" />
                             <span className="ml-1 truncate">{item.contact.email}</span>
                           </span>
                           <span
-                            className={`absolute left-0 right-0 flex items-center gap-1 transition-all duration-300 ${
+                            className={`w-full justify-start absolute left-0 right-0 flex items-center gap-1 transition-all duration-300 ${
                               copied
                                 ? "opacity-100 translate-y-0"
                                 : "opacity-0 -translate-y-2 pointer-events-none"
                             }`}
-                            style={{
-                              width: "100%",
-                              justifyContent: "flex-start",
-                            }}
                           >
                             <Check size={18} className="text-primary" />
                             <span

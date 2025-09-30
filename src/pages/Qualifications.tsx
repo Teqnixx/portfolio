@@ -36,7 +36,7 @@ const Qualifications: React.FC<QualificationsProps> = ({ user }) => {
   ];
 
   return (
-    <div className="w-full space-y-8">
+    <div className="w-full space-y-8 overflow-y-auto p-2">
       {user.map((item, index) => (
         <div key={index} className="space-y-8">
           <section>
@@ -51,7 +51,7 @@ const Qualifications: React.FC<QualificationsProps> = ({ user }) => {
                 <div key={edu.id} className="bg-white p-4 rounded-lg border border-gray-200 shadow-sm">
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
                     <h3 className="text-base sm:text-lg font-semibold text-primary">{edu.degree}</h3>
-                    <span className="text-xs sm:text-sm text-secondary bg-gray-100 px-2 py-1 rounded">
+                    <span className="text-xs sm:text-sm text-secondary bg-gray-100 px-2 py-1 rounded w-fit">
                       {edu.year}
                     </span>
                   </div>

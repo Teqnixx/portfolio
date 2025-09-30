@@ -10,7 +10,7 @@ function BottomNav({ className = "" }: BottomNavProps) {
     <nav className={`fixed bottom-0 left-0 right-0 ${className}`}>
       <div className="mx-auto max-w-screen-md">
         <div className="m-2 rounded-xl bg-background">
-          <ul className="grid grid-flow-col auto-cols-fr">
+          <ul className="grid grid-flow-col auto-cols-fr gap-2">
             {sidebarItems.map((item) => (
               <li key={item.label}>
                 <NavLink

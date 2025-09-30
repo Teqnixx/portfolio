@@ -32,7 +32,7 @@ const Projects: React.FC<ProjectsProps> = ({ user }) => {
   };
 
   return (
-    <div className="w-full space-y-8">
+    <div className="w-full space-y-8 overflow-y-auto p-2">
       {user.map((item, index) => (
         <div key={index} className="space-y-8">
           <section>
@@ -81,7 +81,7 @@ const Projects: React.FC<ProjectsProps> = ({ user }) => {
                                 className="flex items-center gap-1 bg-gray-100 text-secondary px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm border border-gray-200"
                               >
                                 {getLanguageIcon(language)}
-                                <span className="capitalize">{language}</span>
+                                <span>{language}</span>
                               </span>
                             ))}
                           </div>

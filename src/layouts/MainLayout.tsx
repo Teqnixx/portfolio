@@ -8,7 +8,7 @@ function MainLayout() {
       <div className="hidden sm:block rounded-xl border border-secondary/20 h-full">
         <SideBar className="lg:w-[300px] h-full p-2 md:p-4 rounded-xl" />
       </div>
-      <main className="flex flex-1 min-h-0 p-4 rounded-xl border border-secondary/20 text-primary overflow-y-auto">
+      <main className="flex flex-1 min-h-0 p-2 mb-6 rounded-xl border border-secondary/20 text-primary">
         <Outlet />
       </main>
       <div className="sm:hidden fixed bottom-0 left-0 right-0 z-50">

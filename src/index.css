@@ -8,3 +8,16 @@
   --color-secondary: #222725;
   --breakpoint-xs: 30rem;
 }
+
+::-webkit-scrollbar {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #bdbdbd;
+  border-radius: 8px;
+}
+
+* {
+  scrollbar-color: #bdbdbd transparent;
+}
