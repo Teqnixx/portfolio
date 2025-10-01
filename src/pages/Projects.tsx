@@ -3,6 +3,7 @@ import { ExternalLink, Code, Database, Globe } from "lucide-react";
 interface Project {
   id: number;
   name: string;
+  shortDescription: string;
   description: string;
   projectUrl: string;
   screenshots: string[];
@@ -48,57 +49,49 @@ const Projects: React.FC<ProjectsProps> = ({ user }) => {
                 <p className="text-sm sm:text-base text-secondary">No projects available at the moment.</p>
               </div>
             ) : (
-              <div className="grid gap-6">
+              <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
                 {item.projects.map((project) => (
-                  <div key={project.id} className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
-                    <div className="flex flex-col lg:flex-row gap-6">
-                      {project.screenshots.length > 0 && project.screenshots[0] && (
-                        <div className="lg:w-1/2">
-                          <img
-                            src={project.screenshots[0]}
-                            loading="lazy"
-                            alt={`${project.name} screenshot`}
-                            className="w-full h-48 lg:h-64 object-cover rounded-lg border border-gray-200 shadow-sm"
-                          />
+                  <div key={project.id} className="bg-white flex flex-col p-0 rounded-lg border border-gray-200 shadow-sm overflow-hidden h-full">
+                    {project.screenshots.length > 0 && project.screenshots[0] && (
+                      <img
+                        src={project.screenshots[0]}
+                        loading="lazy"
+                        alt={`${project.name} screenshot`}
+                        className="w-full h-auto border-b border-gray-200"
+                      />
+                    )}
+                    <div className="flex-1 flex flex-col p-6">
+                      <h3 className="text-base sm:text-lg md:text-xl font-bold text-primary mb-3">
+                        {project.name}
+                      </h3>
+                      <p className="text-sm sm:text-base text-secondary leading-relaxed mb-4">
+                        {project.shortDescription}
+                      </p>
+                      <div className="mb-4">
+                        <h4 className="text-sm sm:text-base font-semibold text-primary mb-2">Technologies Used:</h4>
+                        <div className="flex flex-wrap gap-2">
+                          {project.languages.map((language, langIndex) => (
+                            <span
+                              key={langIndex}
+                              className="flex items-center gap-1 bg-gray-100 text-secondary px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm border border-gray-200"
+                            >
+                              {getLanguageIcon(language)}
+                              <span>{language}</span>
+                            </span>
+                          ))}
                         </div>
-                      )}
-                      
-                      <div className={`flex-1 ${project.screenshots.length > 0 && project.screenshots[0] ? 'lg:w-1/2' : ''}`}>
-                        <h3 className="text-base sm:text-lg md:text-xl font-bold text-primary mb-3">
-                          {project.name}
-                        </h3>
-                        
-                        <p className="text-sm sm:text-base text-secondary leading-relaxed mb-4">
-                          {project.description}
-                        </p>
-                        
-                        <div className="mb-4">
-                          <h4 className="text-sm sm:text-base font-semibold text-primary mb-2">Technologies Used:</h4>
-                          <div className="flex flex-wrap gap-2">
-                            {project.languages.map((language, langIndex) => (
-                              <span
-                                key={langIndex}
-                                className="flex items-center gap-1 bg-gray-100 text-secondary px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm border border-gray-200"
-                              >
-                                {getLanguageIcon(language)}
-                                <span>{language}</span>
-                              </span>
-                            ))}
-                          </div>
-                        </div>
-                        
-                        {project.projectUrl && (
-                          <a
-                            href={project.projectUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition-colors text-sm sm:text-base"
-                          >
-                            <ExternalLink size={16} />
-                            View Project
-                          </a>
-                        )}
                       </div>
+                      {project.projectUrl && (
+                        <a
+                          href={project.projectUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition-colors text-sm sm:text-base mt-auto"
+                        >
+                          <ExternalLink size={16} />
+                          View Project
+                        </a>
+                      )}
                     </div>
                   </div>
                 ))}

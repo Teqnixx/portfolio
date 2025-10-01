@@ -66,12 +66,24 @@
       {
         "id": 1,
         "name": "Intern-Net 2.0: Enhanced Student Internship Management System",
+        "shortDescription": "A modern web platform streamlining internship management, DTR, and collaboration for students and partner organizations.",
         "description": "A comprehensive web-based platform that modernizes the internship process at Batangas State University ARASOF – Nasugbu. Features include job postings, Daily Time Record (DTR) management, performance evaluation, real-time messaging, and a job skill matchmaking algorithm. The system significantly improves operational efficiency and enhances collaboration between students and partner organizations.",
         "projectUrl": "",
         "screenshots": [
           "./internnet-landing-page.webp"
         ],
-        "languages": ["HTML", "CSS", "Bootstrap", "JavaScript", "PhP", "jQuery", "MySql"]
+        "languages": ["HTML", "CSS", "Bootstrap", "JavaScript", "Php", "jQuery", "MySql"]
+      },
+      {
+        "id": 2,
+        "name": "Personal Portfolio",
+        "shortDescription": "A responsive React.js portfolio website showcasing my projects, skills, and qualifications as a developer.",
+        "description": "A personal portfolio website developed using React.js, Tailwind CSS. This site serves as a platform to showcase my projects, technical skills, and TypeScript. The website highlights my personal profile, qualifications, and projects as a developer, featuring a modern, responsive design and intuitive navigation.",
+        "projectUrl": "https://teqnixx.github.io/portfolio/",
+        "screenshots": [
+          "./portfolio.webp"
+        ],
+        "languages": ["HTML", "CSS", "TypeScript", "React.js", "TailwindCSS"]
       }
     ],
     "certificates": [
