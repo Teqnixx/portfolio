@@ -206,10 +206,11 @@ const About: React.FC<AboutProps> = ({ user }) => {
                 if (!isValidElementType(IconComponent)) {
                   IconComponent = LucideIcons.Code2;
                 }
+                const AchievementIcon = IconComponent as React.ElementType;
                 return (
                   <div key={achievementIndex} className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm flex flex-col items-center text-center gap-3">
                     <div className="p-3 bg-primary rounded-full mb-2 flex items-center justify-center">
-                      <IconComponent size={28} className="text-white" />
+                      <AchievementIcon size={28} className="text-white" />
                     </div>
                     <p className="text-sm sm:text-base text-secondary leading-relaxed">{achievement.description}</p>
                   </div>
@@ -229,12 +230,13 @@ const About: React.FC<AboutProps> = ({ user }) => {
               {Array.isArray(item.profile.expertise) && item.profile.expertise.map((expertise, expertiseIndex) => {
                 let IconComponent = LucideIcons[expertise.icon as keyof typeof LucideIcons];
                 if (!isValidElementType(IconComponent)) {
-                  IconComponent = LucideIcons;
+                  IconComponent = LucideIcons.Code2;
                 }
+                const ExpertiseIcon = IconComponent as React.ElementType;
                 return (
                   <div key={expertiseIndex} className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm flex flex-col items-center text-center gap-3">
                     <div className="p-3 bg-primary rounded-full mb-2 flex items-center justify-center">
-                      <IconComponent size={28} className="text-white" />
+                      <ExpertiseIcon size={28} className="text-white" />
                     </div>
                     <h3 className="text-base sm:text-lg font-semibold text-primary">{expertise.title}</h3>
                     <p className="text-sm sm:text-base text-secondary leading-relaxed">{expertise.description}</p>
