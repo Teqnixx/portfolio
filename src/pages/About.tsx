@@ -58,8 +58,6 @@ interface Contact {
 interface User {
   education: Education[];
   certificates: Certificates[];
-  achievements: Achievement[];
-  expertise: Expertise[];
   profile: Profile;
   contact: Contact;
 }
