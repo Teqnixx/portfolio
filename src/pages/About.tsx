@@ -1,6 +1,7 @@
-import { Copy, Github, Linkedin, MapPin, Award, Code2, Palette, Music, Camera, Gamepad2, Check } from "lucide-react";
+import * as LucideIcons from "lucide-react";
 import IconButton from "../components/IconButton";
 import React from "react";
+import { isValidElementType } from 'react-is';
 
 interface Education {
   id: number;
@@ -20,6 +21,17 @@ interface Certificates {
   certificateLink: string;
 }
 
+interface Achievement {
+  icon: string;
+  description: string;
+}
+
+interface Expertise {
+  icon: string;
+  title: string;
+  description: string;
+}
+
 interface Profile {
   firstname: string;
   middlename: string;
@@ -30,10 +42,10 @@ interface Profile {
   country: string;
   countryCode: string;
   introduction: string;
-  achievements: string;
+  achievements: Achievement[];
   interestAreas: string[];
-  expertise: string;
-  hobbies: string;
+  expertise: Expertise[];
+  hobbies: string[];
 }
 
 interface Contact {
@@ -46,6 +58,8 @@ interface Contact {
 interface User {
   education: Education[];
   certificates: Certificates[];
+  achievements: Achievement[];
+  expertise: Expertise[];
   profile: Profile;
   contact: Contact;
 }
@@ -75,16 +89,16 @@ const About: React.FC<AboutProps> = ({ user }) => {
                   <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-primary uppercase text-center sm:text-left">
                     {item.profile.firstname + ' ' + item.profile.middlename + ' ' + item.profile.lastname}
                   </h1>
-                  <p className="text-sm sm:text-base md:text-lg text-secondary mt-2 text-center sm:text-left">IT Professional & Aspiring Developer</p>
+                  <p className="text-sm sm:text-base md:text-lg text-secondary mt-2 text-center sm:text-left">Aspiring IT Professional / Developer / Business Analyst</p>
                 </div>
                 <div className="flex items-center justify-center sm:justify-start gap-2 text-xs sm:text-sm text-secondary">
-                  <MapPin size={16} className="text-secondary" />
+                  <LucideIcons.MapPin size={16} className="text-secondary" />
                   <span>{item.profile.municipality}, {item.profile.province}, {item.profile.country}</span>
                 </div>
                 <div className="flex flex-col xs:flex-row gap-3">
                   <div className="flex justify-center sm:justify-start gap-3">
                     <IconButton
-                      icon={<Github size={18} />}
+                      icon={<LucideIcons.Github size={18} />}
                       link={item.contact.github}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -92,7 +106,7 @@ const About: React.FC<AboutProps> = ({ user }) => {
                       ariaLabel="GitHub"
                     />
                     <IconButton
-                      icon={<Linkedin size={18} />}
+                      icon={<LucideIcons.Linkedin size={18} />}
                       link={item.contact.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -122,7 +136,7 @@ const About: React.FC<AboutProps> = ({ user }) => {
                                 : "opacity-100 translate-y-0"
                             }`}
                           >
-                            <Copy size={18} className="text-secondary hover:text-primary transition-colors" />
+                            <LucideIcons.Copy size={18} className="text-secondary hover:text-primary transition-colors" />
                             <span className="ml-1 truncate">{item.contact.email}</span>
                           </span>
                           <span
@@ -132,7 +146,7 @@ const About: React.FC<AboutProps> = ({ user }) => {
                                 : "opacity-0 -translate-y-2 pointer-events-none"
                             }`}
                           >
-                            <Check size={18} className="text-primary" />
+                            <LucideIcons.Check size={18} className="text-primary" />
                             <span
                               className="text-primary"
                               style={{
@@ -168,9 +182,9 @@ const About: React.FC<AboutProps> = ({ user }) => {
           <section>
             <div className="flex items-center gap-3 mb-4">
               <div className="p-2 bg-primary rounded-lg">
-                <Code2 size={20} className="text-white" />
+                <LucideIcons.Code2 size={20} className="text-white" />
               </div>
-              <h2 className="text-lg sm:text-xl font-bold text-primary">About Me</h2>
+              <h2 className="text-lg sm:text-xl font-bold text-primary">Professional Summary</h2>
             </div>
             <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
               <p className="text-sm sm:text-base text-secondary leading-relaxed">
@@ -182,21 +196,58 @@ const About: React.FC<AboutProps> = ({ user }) => {
           <section>
             <div className="flex items-center gap-3 mb-4">
               <div className="p-2 bg-primary rounded-lg">
-                <Award size={20} className="text-white" />
+                <LucideIcons.Award size={20} className="text-white" />
               </div>
               <h2 className="text-lg sm:text-xl font-bold text-primary">Key Achievements</h2>
             </div>
-            <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
-              <p className="text-sm sm:text-base text-secondary leading-relaxed">
-                {item.profile.achievements}
-              </p>
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+              {Array.isArray(item.profile.achievements) && item.profile.achievements.map((achievement, achievementIndex) => {
+                let IconComponent = LucideIcons[achievement.icon as keyof typeof LucideIcons];
+                if (!isValidElementType(IconComponent)) {
+                  IconComponent = LucideIcons.Code2;
+                }
+                return (
+                  <div key={achievementIndex} className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm flex flex-col items-center text-center gap-3">
+                    <div className="p-3 bg-primary rounded-full mb-2 flex items-center justify-center">
+                      <IconComponent size={28} className="text-white" />
+                    </div>
+                    <p className="text-sm sm:text-base text-secondary leading-relaxed">{achievement.description}</p>
+                  </div>
+                );
+              })}
             </div>
           </section>
 
           <section>
             <div className="flex items-center gap-3 mb-4">
               <div className="p-2 bg-primary rounded-lg">
-                <Palette size={20} className="text-white" />
+                <LucideIcons.Code2 size={20} className="text-white" />
+              </div>
+              <h2 className="text-lg sm:text-xl font-bold text-primary">Technical Expertise</h2>
+            </div>
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+              {Array.isArray(item.profile.expertise) && item.profile.expertise.map((expertise, expertiseIndex) => {
+                let IconComponent = LucideIcons[expertise.icon as keyof typeof LucideIcons];
+                if (!isValidElementType(IconComponent)) {
+                  IconComponent = LucideIcons;
+                }
+                return (
+                  <div key={expertiseIndex} className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm flex flex-col items-center text-center gap-3">
+                    <div className="p-3 bg-primary rounded-full mb-2 flex items-center justify-center">
+                      <IconComponent size={28} className="text-white" />
+                    </div>
+                    <h3 className="text-base sm:text-lg font-semibold text-primary">{expertise.title}</h3>
+                    <p className="text-sm sm:text-base text-secondary leading-relaxed">{expertise.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </section>
+
+          <section>
+            <div className="flex items-center gap-3 mb-4">
+              <div className="p-2 bg-primary rounded-lg">
+                <LucideIcons.Palette size={20} className="text-white" />
               </div>
               <h2 className="text-lg sm:text-xl font-bold text-primary">Interest Areas</h2>
             </div>
@@ -216,37 +267,24 @@ const About: React.FC<AboutProps> = ({ user }) => {
 
           <section>
             <div className="flex items-center gap-3 mb-4">
-              <div className="p-2 bg-primary rounded-lg">
-                <Code2 size={20} className="text-white" />
-              </div>
-              <h2 className="text-lg sm:text-xl font-bold text-primary">Technical Expertise</h2>
-            </div>
-            <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
-              <p className="text-sm sm:text-base text-secondary leading-relaxed">
-                {item.profile.expertise}
-              </p>
-            </div>
-          </section>
-
-          <section>
-            <div className="flex items-center gap-3 mb-4">
               <div className="flex gap-2">
                 <div className="p-2 bg-primary rounded-lg">
-                  <Music size={16} className="text-white" />
-                </div>
-                <div className="p-2 bg-primary rounded-lg">
-                  <Camera size={16} className="text-white" />
-                </div>
-                <div className="p-2 bg-primary rounded-lg">
-                  <Gamepad2 size={16} className="text-white" />
+                  <LucideIcons.Gamepad2 size={20} className="text-white" />
                 </div>
               </div>
-              <h2 className="text-lg sm:text-xl font-bold text-primary">Personal Interests</h2>
+              <h2 className="text-lg sm:text-xl font-bold text-primary">Skills Beyond Tech</h2>
             </div>
             <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
-              <p className="text-sm sm:text-base text-secondary leading-relaxed">
-                {item.profile.hobbies}
-              </p>
+              <div className="flex flex-wrap gap-3">
+                {item.profile.hobbies.map((area, areaIndex) => (
+                  <span
+                    key={areaIndex}
+                    className="bg-primary text-white px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium"
+                  >
+                    {area}
+                  </span>
+                ))}
+              </div>
             </div>
           </section>
         </div>

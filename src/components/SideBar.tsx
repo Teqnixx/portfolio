@@ -1,4 +1,4 @@
-import { type LucideIcon, User, Award, FileJson } from "lucide-react";
+import { type LucideIcon, User, Award, FileJson, Copyright } from "lucide-react";
 import { NavLink } from "react-router-dom";
 
 export interface SidebarItem {
@@ -38,6 +38,9 @@ function SideBar({ className = "" }: SideBarProps) {
             <span className="hidden lg:block text-sm">{item.label}</span>
           </NavLink>
         ))}
+      </div>
+      <div className="mt-auto pt-4 text-xs text-secondary/60 text-center select-none hidden md:flex items-center justify-center gap-2">
+        <Copyright className="text-secondary/60" size={16} />{new Date().getFullYear()} Allen Jamison Mendoza
       </div>
     </div>
   )

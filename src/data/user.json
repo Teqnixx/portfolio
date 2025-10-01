@@ -11,22 +11,61 @@
       "country": "Philippines",
       "countryCode": "PH",
       "introduction": "I'm Allen Jamison B. Mendoza, an aspiring IT professional passionate about building innovative solutions that merge technology and business strategy. As an Information Technology graduate with Business Analytics specialization, I transform complex problems into simple, impactful digital experiences. Driven by curiosity and continuous learning, I develop web applications, analyze data, and design intuitive systems to make technology more accessible and valuable in solving real-world challenges.",
-      "achievements": "Graduated Cum Laude from Batangas State University with multiple industry certifications including IT Specialist in Data Analytics and Databases, IT Passport, and web development credentials. My hands-on experience spans web development, data visualization, and database management using React.js, Python, Power BI, and Tableau. Each project has strengthened my ability to turn ideas into solutions, preparing me for meaningful impact in the tech industry.",
+      "achievements": [
+        {
+          "icon": "GraduationCap",
+          "description": "Graduated Cum Laude from Batangas State University, showcasing strong academic performance and dedication to continuous learning."
+        },
+        {
+          "icon": "FileBadge",
+          "description": "Earned multiple certifications including IT Specialist in Data Analytics and Databases, IT Passport, and Web Development, demonstrating readiness for real-world tech challenges."
+        },
+        {
+          "icon": "Code",
+          "description": "Built projects in web development, data visualization, and database management using React.js, Python, Power BI, and Tableau, turning ideas into impactful solutions."
+        }
+      ],
       "interestAreas": [
         "Web Development",
         "Software Development",
         "Data Analytics & Visualization",
         "Database Management",
-        "Business Analytics"
+        "Business Analytics",
+        "Game Development",
+        "Web Design",
+        "MS Office"
       ],
-      "expertise": "Passionate about building modern, intuitive web experiences using React.js, Node.js, Tailwind CSS, and PostgreSQL. I work across the stack with JavaScript, Python, Java, C#, and C++, crafting functional and impactful solutions. Data drives my curiosity — I uncover stories in numbers through Power BI and Tableau. I'm fascinated by smart database design and scalable architectures that create seamless user experiences. While focused on web development and data-driven applications, I also explore game development as a creative outlet to expand my problem-solving skills.",
-      "hobbies": "Beyond technology, I enjoy creative interests that inspire and balance my life. I play guitar and appreciate diverse music genres, finding joy in both performing and listening. Gaming helps me relax and challenge strategic thinking, while photography lets me capture everyday moments and see the world from new perspectives."
+      "expertise": [
+        {
+          "icon": "Code",
+          "title": "Full-Stack Web Development",
+          "description": "Crafting modern, responsive web experiences using React.js, Node.js, Tailwind CSS, PostgreSQL, etc. I build scalable, functional, and user-focused solutions across the stack."
+        },
+        {
+          "icon": "ChartPie",
+          "title": "Data Analytics & Visualization",
+          "description": "Driven by data, I uncover insights using Power BI and Tableau, transforming complex information into actionable visuals and data-driven applications."
+        },
+        {
+          "icon": "Cpu",
+          "title": "Creative & Scalable Solutions",
+          "description": "Exploring smart database design, scalable architectures, and game development as creative outlets to push my problem-solving skills further."
+        }
+      ],
+      "hobbies": [
+        "Gaming",
+        "Photography",
+        "Music",
+        "Instruments",
+        "Puzzles",
+        "Esports"
+      ]
     },
     "contact": {
       "phoneNumber": "09955762134",
       "email": "allenjamison027@gmail.com",
       "github": "https://github.com/Teqnixx",
-      "linkedin": "www.linkedin.com/in/allen-jamison-mendoza-18a4a7354"
+      "linkedin": "https://www.linkedin.com/in/allen-jamison-mendoza-18a4a7354"
     },
     "education": [
       {
@@ -72,7 +111,7 @@
         "screenshots": [
           "./internnet-landing-page.webp"
         ],
-        "languages": ["HTML", "CSS", "Bootstrap", "JavaScript", "Php", "jQuery", "MySql"]
+        "languages": ["HTML", "CSS", "Bootstrap", "JavaScript", "PHP", "jQuery", "MySql"]
       },
       {
         "id": 2,

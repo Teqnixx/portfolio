@@ -29,10 +29,10 @@ interface QualificationsProps {
 
 const Qualifications: React.FC<QualificationsProps> = ({ user }) => {
   const skills = [
-    { category: "Programming Languages", items: ["HTML", "CSS", "JavaScript", "PHP"] },
-    { category: "Databases", items: ["MySQL", "SQL"] },
-    { category: "Frameworks & Libraries", items: ["jQuery", "React", "TypeScript"] },
-    { category: "Tools & Technologies", items: ["Git", "Data Analytics", "Database Management"] }
+    { category: "Web/Software Development", items: ["HTML", "CSS", "JavaScript", "PHP", "Java", "Python", "C#", "C++"] },
+    { category: "Database Management", items: ["MySQL", "SQL", "PostgreSQL"] },
+    { category: "Frameworks & Libraries", items: ["jQuery", "React.js", "TypeScript", "Node.js", "Bootstrap", "TailwindCSS", "Express.js", "Next.js"] },
+    { category: "Tools & Technologies", items: ["Git", "Data Analytics", "Database Management", "Power BI", "Tableau", "MS Office"] }
   ];
 
   return (
