@@ -167,14 +167,6 @@
         "imageUrl": "./VideoGameSales.webp",
         "tool": "Tableu",
         "description": "A dashboard activity that displays the total sales of video games in millions."
-      },
-      
-      {
-        "id": 2,
-        "title": "",
-        "link": "https://public.tableau.com/app/profile/allen.jamison.mendoza/viz/VideoGameSalesInMillions/TotalSales",
-        "imageUrl": "./VideoGameSales.webp",
-        "tool": "Power BI"
       }
     ]
   }
