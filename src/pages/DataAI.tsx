@@ -7,7 +7,7 @@ interface DataAI {
   link: string;
   imageUrl: string;
   tools: string[];
-  description: string[];
+  description: string;
 }
 
 interface User {
