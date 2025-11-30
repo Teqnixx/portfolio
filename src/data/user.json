@@ -176,8 +176,26 @@
         "title": "(In Millions) Video Game Sales Dashboard",
         "link": "https://public.tableau.com/app/profile/allen.jamison.mendoza/viz/VideoGameSalesInMillions/TotalSales",
         "imageUrl": "./VideoGameSales.webp",
-        "tool": "Tableu",
+        "tools": [
+          "Tableu"
+        ],
         "description": "A dashboard activity that displays the total sales of video games in millions."
+      },
+      {
+        "id": 2,
+        "title": "Global Video Game Sales using Regression Analysis",
+        "link": "https://github.com/Teqnixx/Global-Video-Game-Sales-Using-Regression-Analysis",
+        "imageUrl": "./global-video-game-sales-using-regression-analysis.webp",
+        "tools": [
+          "Google Colab",
+          "Python",
+          "NumPy",
+          "Pandas",
+          "Matplotlib",
+          "Seaborn",
+          "sk-learn"
+        ],
+        "description": "A regression analysis activity that predicts the sales of video games using the global video game sales data."
       }
     ]
   }

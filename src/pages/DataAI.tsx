@@ -6,7 +6,7 @@ interface DataAI {
   title: string;
   link: string;
   imageUrl: string;
-  tool: string;
+  tools: string[];
   description: string[];
 }
 
@@ -54,14 +54,18 @@ const DataAI: React.FC<DataAIProps> = ({ user }) => {
                       <p className="text-sm sm:text-base text-secondary leading-relaxed mb-4">
                         {dataAI.description}
                       </p>
-                      <div className="mb-4 flex items-center align-middle gap-2">
+                      <div className="mb-4">
                         <h4 className="text-sm sm:text-base font-semibold text-primary">Tool:</h4>
                         <div className="flex flex-wrap gap-2">
-                          <span
-                            className="flex items-center gap-1 bg-gray-100 text-secondary px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm border border-gray-200"
-                          >
-                            {dataAI.tool}
-                          </span>
+                          {Array.isArray(dataAI?.tools) &&
+                            dataAI.tools.map((item: string, index: number) => (
+                              <span
+                                key={index}
+                                className="flex items-center gap-1 bg-gray-100 text-secondary px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm border border-gray-200"
+                              >
+                                {item}
+                              </span>
+                            ))}
                         </div>
                       </div>
                       {dataAI.link && (
