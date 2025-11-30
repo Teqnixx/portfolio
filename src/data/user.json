@@ -158,6 +158,24 @@
         "imageUrl": "./it-specialist-databases.webp",
         "certificateLink": "https://www.credly.com/badges/df492509-c013-438f-977a-679b53ddf7ec/public_url"
       }
+    ],
+    "dataAI": [
+      {
+        "id": 1,
+        "title": "(In Millions) Video Game Sales Dashboard",
+        "link": "https://public.tableau.com/app/profile/allen.jamison.mendoza/viz/VideoGameSalesInMillions/TotalSales",
+        "imageUrl": "./VideoGameSales.webp",
+        "tool": "Tableu",
+        "description": "A dashboard activity that displays the total sales of video games in millions."
+      },
+      
+      {
+        "id": 2,
+        "title": "",
+        "link": "https://public.tableau.com/app/profile/allen.jamison.mendoza/viz/VideoGameSalesInMillions/TotalSales",
+        "imageUrl": "./VideoGameSales.webp",
+        "tool": "Power BI"
+      }
     ]
   }
 ]

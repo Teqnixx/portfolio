@@ -1,4 +1,4 @@
-import { type LucideIcon, User, Award, FileJson, Copyright } from "lucide-react";
+import { type LucideIcon, User, Award, FileJson, Copyright, ChartNoAxesColumnIncreasing } from "lucide-react";
 import { NavLink } from "react-router-dom";
 
 export interface SidebarItem {
@@ -11,6 +11,7 @@ export const sidebarItems: SidebarItem[] = [
   { label: "About Me", icon: User, route: "/" },
   { label: "Qualifications", icon: Award, route: "/qualifications" },
   { label: "Projects", icon: FileJson, route: "/projects" },
+  { label: "Data & AI", icon: ChartNoAxesColumnIncreasing, route: "/dataai" },
 ]
 
 interface SideBarProps {

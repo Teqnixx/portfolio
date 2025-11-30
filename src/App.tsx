@@ -4,6 +4,7 @@ import MainLayout from './layouts/MainLayout'
 import About from './pages/About'
 import Qualifications from './pages/Qualifications'
 import Projects from './pages/Projects'
+import DataAI from './pages/DataAI'
 import data from './data/user.json'
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<About user={data} />} />
           <Route path="/qualifications" element={<Qualifications user={data} />} />
           <Route path="/projects" element={<Projects user={data} />} />
+          <Route path="/dataai" element={<DataAI user={data} />} />
         </Route>
       </Routes>
     </HashRouter>

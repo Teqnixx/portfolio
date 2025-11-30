@@ -1,7 +1,6 @@
 import * as LucideIcons from "lucide-react";
 import IconButton from "../components/IconButton";
 import React from "react";
-import { isValidElementType } from 'react-is';
 
 interface Education {
   id: number;
@@ -201,9 +200,7 @@ const About: React.FC<AboutProps> = ({ user }) => {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
               {Array.isArray(item.profile.achievements) && item.profile.achievements.map((achievement, achievementIndex) => {
                 let IconComponent = LucideIcons[achievement.icon as keyof typeof LucideIcons];
-                if (!isValidElementType(IconComponent)) {
-                  IconComponent = LucideIcons.Code2;
-                }
+                IconComponent = LucideIcons.Code2;
                 const AchievementIcon = IconComponent as React.ElementType;
                 return (
                   <div key={achievementIndex} className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm flex flex-col items-center text-center gap-3">
@@ -227,9 +224,7 @@ const About: React.FC<AboutProps> = ({ user }) => {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
               {Array.isArray(item.profile.expertise) && item.profile.expertise.map((expertise, expertiseIndex) => {
                 let IconComponent = LucideIcons[expertise.icon as keyof typeof LucideIcons];
-                if (!isValidElementType(IconComponent)) {
-                  IconComponent = LucideIcons.Code2;
-                }
+                IconComponent = LucideIcons.Code2;
                 const ExpertiseIcon = IconComponent as React.ElementType;
                 return (
                   <div key={expertiseIndex} className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm flex flex-col items-center text-center gap-3">
