@@ -115,6 +115,17 @@
       },
       {
         "id": 2,
+        "name": "Blend & Sip Online Ordering System",
+        "shortDescription": "A modern web platform streamlining online ordering for a coffee shop.",
+        "description": "A modern web platform streamlining online ordering for a coffee shop. This project is a web-based ordering system for a coffee shop that allows customers to order their coffee online and pick it up at the shop.",
+        "projectUrl": "https://github.com/Teqnixx/online-ordering-system-new",
+        "screenshots": [
+          "./blend&sip-landing-page.webp"
+        ],
+        "languages": ["HTML", "CSS", "Bootstrap", "JavaScript", "PHP", "jQuery", "MySql"]
+      },
+      {
+        "id": 3,
         "name": "Personal Portfolio",
         "shortDescription": "A responsive React.js portfolio website showcasing my projects, skills, and qualifications as a developer.",
         "description": "A personal portfolio website developed using React.js, Tailwind CSS. This site serves as a platform to showcase my projects, technical skills, and TypeScript. The website highlights my personal profile, qualifications, and projects as a developer, featuring a modern, responsive design and intuitive navigation.",
